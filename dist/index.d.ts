@@ -77,9 +77,14 @@ export interface PluginOptions {
 	updateStyleManager?: boolean;
 	/**
 	 * Show the Style Manager on component change.
-	 * @default true
+	 * @default false
 	 */
 	showStylesOnChange?: boolean;
+	/**
+   * Show the Style Manager on component change.
+   * @default true
+   */
+	showTraitsOnChange?: boolean;
 	/**
 	 * Show the Block Manager on load.
 	 * @default true

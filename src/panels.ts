@@ -145,6 +145,13 @@ export default (editor: Editor, opts: Required<PluginOptions>) => {
     }
   });
 
+  opts.showTraitsOnChange && editor.on('component:selected', () => {
+    const openTraitsBtn = Panels.getButton('views', openTraits);
+    if (!openTraitsBtn || !openTraitsBtn.get('active') && editor.getSelected()) {
+      openTraitsBtn?.set('active', true);
+    }
+  })
+
   // Do stuff on load
   editor.onReady(() => {
     if (opts.showBlocksOnLoad) {

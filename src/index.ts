@@ -96,9 +96,15 @@ export interface PluginOptions {
 
   /**
    * Show the Style Manager on component change.
-   * @default true
+   * @default false
    */
   showStylesOnChange?: boolean;
+
+    /**
+   * Show the Style Manager on component change.
+   * @default true
+   */
+    showTraitsOnChange?: boolean;
 
   /**
    * Show the Block Manager on load.
@@ -163,7 +169,8 @@ const plugin: Plugin<PluginOptions> = (editor, opts: Partial<PluginOptions> = {}
       width: '100%'
     },
     updateStyleManager: true,
-    showStylesOnChange: true,
+    showStylesOnChange: false,
+    showTraitsOnChange: true,
     showBlocksOnLoad: true,
     useCustomTheme: true,
     textCleanCanvas: 'Are you sure you want to clear the canvas?',

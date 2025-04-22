@@ -26,6 +26,9 @@ importers:
       juice:
         specifier: ^8.1.0
         version: 8.1.0
+      typescript:
+        specifier: ^5.1.6
+        version: 5.8.3
 
 packages:
 
