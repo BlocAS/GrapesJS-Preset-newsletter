@@ -91,8 +91,8 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
     content: `
       <table cellspacing="0" cellpadding="0" border="0">
         <tr>
-          <td align="center" bgcolor="#3b97e3" style="padding: 12px 18px; border-radius: 4px;">
-            <a href="#" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; display: inline-block;">Button</a>
+          <td align="center" bgcolor="#3b97e3" style="padding: 12px 18px; border-radius: 4px; box-shadow: 0 3px 6px rgba(0,0,0,0.16); transition: all 0.3s ease;">
+            <a href="#" target="_blank" style="font-size: 16px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; display: inline-block; text-transform: uppercase; letter-spacing: 1px; border: 1px solid #2d7bbf; border-radius: 4px;">Button</a>
           </td>
         </tr>
       </table>
