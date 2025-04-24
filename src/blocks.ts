@@ -29,9 +29,9 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
       <path fill="currentColor" d="M2 20h20V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1Z"/>
     </svg>`,
     content: `
-      <table style="${tableStyleStr}">
+      <table cellspacing="0" cellpadding="0" border="0" width="100%" style="${tableStyleStr}">
         <tr>
-          <td style="${cellStyleStr}"></td>
+          <td style="${cellStyleStr}" align="center" valign="top"></td>
         </tr>
       </table>
     `,
@@ -43,10 +43,10 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
       <path fill="currentColor" d="M2 20h8V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1ZM13 20h8V4h-8v16Zm-1 0V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1Z"/>
     </svg>`,
     content: `
-      <table style="${tableStyleStr}">
+      <table cellspacing="0" cellpadding="0" border="0" width="100%" style="${tableStyleStr}">
         <tr>
-          <td style="${cellStyleStr} width: 50%"></td>
-          <td style="${cellStyleStr} width: 50%"></td>
+          <td style="${cellStyleStr}" width="50%" align="center" valign="top"></td>
+          <td style="${cellStyleStr}" width="50%" align="center" valign="top"></td>
         </tr>
       </table>
     `,
@@ -58,11 +58,11 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
       <path fill="currentColor" d="M2 20h4V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1ZM17 20h4V4h-4v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1ZM9.5 20h4V4h-4v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1Z"/>
     </svg>`,
     content: `
-      <table style="${tableStyleStr}">
+      <table cellspacing="0" cellpadding="0" border="0" width="100%" style="${tableStyleStr}">
         <tr>
-          <td style="${cellStyleStr} width: 33.3333%"></td>
-          <td style="${cellStyleStr} width: 33.3333%"></td>
-          <td style="${cellStyleStr} width: 33.3333%"></td>
+          <td style="${cellStyleStr}" width="33.3333%" align="center" valign="top"></td>
+          <td style="${cellStyleStr}" width="33.3333%" align="center" valign="top"></td>
+          <td style="${cellStyleStr}" width="33.3333%" align="center" valign="top"></td>
         </tr>
       </table>
     `,
@@ -74,10 +74,10 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
       <path fill="currentColor" d="M2 20h5V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1ZM10 20h12V4H10v16Zm-1 0V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1Z"></path>
     </svg>`,
     content: `
-      <table style="${tableStyleStr}">
+      <table cellspacing="0" cellpadding="0" border="0" width="100%" style="${tableStyleStr}">
         <tr>
-          <td style="${cellStyleStr} width:30%"></td>
-          <td style="${cellStyleStr} width:70%"></td>
+          <td style="${cellStyleStr}" width="30%" align="center" valign="top"></td>
+          <td style="${cellStyleStr}" width="70%" align="center" valign="top"></td>
         </tr>
       </table>
     `,
@@ -88,7 +88,15 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M20 20.5C20 21.3 19.3 22 18.5 22H13C12.6 22 12.3 21.9 12 21.6L8 17.4L8.7 16.6C8.9 16.4 9.2 16.3 9.5 16.3H9.7L12 18V9C12 8.4 12.4 8 13 8S14 8.4 14 9V13.5L15.2 13.6L19.1 15.8C19.6 16 20 16.6 20 17.1V20.5M20 2H4C2.9 2 2 2.9 2 4V12C2 13.1 2.9 14 4 14H8V12H4V4H20V12H18V14H20C21.1 14 22 13.1 22 12V4C22 2.9 21.1 2 20 2Z" />
     </svg>`,
-    content: '<a class="button">Button</a>',
+    content: `
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td align="center" bgcolor="#3b97e3" style="padding: 12px 18px; border-radius: 4px;">
+            <a href="#" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; display: inline-block;">Button</a>
+          </td>
+        </tr>
+      </table>
+    `,
   });
 
   addBlock('divider', {
@@ -97,17 +105,11 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
         <path fill="currentColor" d="M21 18H2V20H21V18M19 10V14H4V10H19M20 8H3C2.45 8 2 8.45 2 9V15C2 15.55 2.45 16 3 16H20C20.55 16 21 15.55 21 15V9C21 8.45 20.55 8 20 8M21 4H2V6H21V4Z" />
     </svg>`,
     content: `
-      <table style="width: 100%; margin-top: 10px; margin-bottom: 10px;">
+      <table cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-top: 10px; margin-bottom: 10px;">
         <tr>
-          <td class="divider"></td>
+          <td height="1" bgcolor="#E0E0E0" style="font-size: 0; line-height: 0;">&nbsp;</td>
         </tr>
       </table>
-      <style>
-        .divider {
-          background-color: rgba(0, 0, 0, 0.1);
-          height: 1px;
-        }
-      </style>
     `,
   });
 
@@ -120,7 +122,7 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
     content: {
       type: 'text',
       content: 'Insert your text here',
-      style: { padding: '10px' },
+      style: { padding: '10px', 'font-family': 'Arial, Helvetica, sans-serif' },
     },
   });
 
@@ -130,10 +132,16 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
         <path fill="currentColor" d="M20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20M4,6V18H20V6H4M6,9H18V11H6V9M6,13H16V15H6V13Z" />
     </svg>`,
     content: `
-      <h1 class="heading">Insert title here</h1>
-      <p class="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-      </p>
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+          <td style="padding: 10px; font-family: Arial, Helvetica, sans-serif;">
+            <h1 style="font-size: 24px; font-weight: bold; margin-bottom: 10px;">Insert title here</h1>
+            <p style="font-size: 14px; line-height: 1.5; margin: 0;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+          </td>
+        </tr>
+      </table>
     `,
   });
 
@@ -143,10 +151,15 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
       <path fill="currentColor" d="M21,3H3C2,3 1,4 1,5V19A2,2 0 0,0 3,21H21C22,21 23,20 23,19V5C23,4 22,3 21,3M5,17L8.5,12.5L11,15.5L14.5,11L19,17H5Z" />
     </svg>`,
     activate: true,
-    content: {
-      type:'image',
-      style: { color:'black' },
-    },
+    content: `
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+          <td align="center">
+            <img src="https://via.placeholder.com/600x400" alt="Image" width="100%" style="display: block; max-width: 100%; height: auto;" />
+          </td>
+        </tr>
+      </table>
+    `,
   });
 
   addBlock('quote', {
@@ -154,7 +167,15 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z" />
     </svg>`,
-    content: '<blockquote class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit</blockquote>',
+    content: `
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+          <td style="padding: 10px 20px; border-left: 4px solid #ccc; font-family: Arial, Helvetica, sans-serif; font-style: italic; color: #666666;">
+            <p style="font-size: 16px; line-height: 1.5; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit</p>
+          </td>
+        </tr>
+      </table>
+    `,
   });
 
   addBlock('link', {
@@ -162,11 +183,9 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
     media: `<svg viewBox="0 0 24 24">
       <path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z"></path>
     </svg>`,
-    content: {
-      type: 'link',
-      content: 'Link',
-      style: { color:'#3b97e3' }
-    },
+    content: `
+      <a href="#" target="_blank" style="color: #3b97e3; text-decoration: underline; font-family: Arial, Helvetica, sans-serif;">Link</a>
+    `,
   });
 
   addBlock('link-block', {
@@ -174,29 +193,27 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
     media: `<svg viewBox="0 0 24 24">
       <path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z"></path>
     </svg>`,
-    content: {
-      type: 'link',
-      editable: false,
-      droppable: true,
-      style: {
-        display: 'inline-block',
-        padding: '5px',
-        'min-height': '50px',
-        'min-width': '50px'
-      }
-    },
+    content: `
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td style="padding: 5px; border: 1px solid #ccc; min-height: 50px; min-width: 50px;">
+            <a href="#" target="_blank" style="color: #3b97e3; text-decoration: none; display: block; min-height: 50px; min-width: 50px;"></a>
+          </td>
+        </tr>
+      </table>
+    `,
   });
 
   const gridItem =
-    `<table class="grid-item-card">
+    `<table cellspacing="0" cellpadding="0" border="0" width="100%" style="border-collapse: separate; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 10px;">
       <tr>
-        <td class="grid-item-card-cell">
-          <img class="grid-item-image" src="https://via.placeholder.com/250x150/78c5d6/fff/" alt="Image"/>
-          <table class="grid-item-card-body">
+        <td style="padding: 0;" align="center">
+          <img src="https://via.placeholder.com/250x150/78c5d6/fff/" alt="Image" width="100%" style="display: block; max-width: 100%; height: auto; border-top-left-radius: 4px; border-top-right-radius: 4px;"/>
+          <table cellspacing="0" cellpadding="0" border="0" width="100%">
             <tr>
-              <td class="grid-item-card-content">
-                <h1 class="card-title">Title here</h1>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+              <td style="padding: 15px; font-family: Arial, Helvetica, sans-serif;">
+                <h1 style="font-size: 18px; font-weight: bold; margin-top: 0; margin-bottom: 10px;">Title here</h1>
+                <p style="font-size: 14px; line-height: 1.5; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
               </td>
             </tr>
           </table>
@@ -210,27 +227,27 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
       <path fill="currentColor" d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"/>
     </svg>`,
     content: `
-      <table class="grid-item-row">
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
         <tr>
-          <td class="grid-item-cell2-l">${gridItem}</td>
-          <td class="grid-item-cell2-r">${gridItem}</td>
+          <td width="50%" style="padding-right: 5px;" valign="top">${gridItem}</td>
+          <td width="50%" style="padding-left: 5px;" valign="top">${gridItem}</td>
         </tr>
       </table>
     `,
   });
 
   const listItem =
-    `<table class="list-item">
+    `<table cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 10px;">
       <tr>
-        <td class="list-item-cell">
-          <table class="list-item-content">
-            <tr class="list-item-row">
-              <td class="list-cell-left">
-                <img class="list-item-image" src="https://via.placeholder.com/150/78c5d6/fff" alt="Image"/>
+        <td style="padding: 10px; border: 1px solid #e0e0e0; border-radius: 4px;">
+          <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td width="30%" style="padding-right: 15px;" valign="top">
+                <img src="https://via.placeholder.com/150/78c5d6/fff" alt="Image" width="100%" style="display: block; max-width: 100%; height: auto; border-radius: 4px;"/>
               </td>
-              <td class="list-cell-right">
-                <h1 class="card-title">Title here</h1>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+              <td width="70%" style="font-family: Arial, Helvetica, sans-serif;" valign="top">
+                <h1 style="font-size: 18px; font-weight: bold; margin-top: 0; margin-bottom: 10px;">Title here</h1>
+                <p style="font-size: 14px; line-height: 1.5; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
               </td>
             </tr>
           </table>
